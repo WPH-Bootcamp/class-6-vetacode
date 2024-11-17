@@ -7,23 +7,6 @@
 // if they are not valid warn 'Invalid color type or level' and return null
 // null is a special value in Sass that means nothing, and it is used to represent the absence of a value, you need to return null if the type or level is not valid
 
-// @function get-color($type, $level) {
-//   // Check if the color type exists in the map
-//   @if map.has-key($colors, $type) {
-//     $color-map: map.get($colors, $type);
-
-//     // Check if the level exists within that color type
-//     @if map.has-key($color-map, $level) {
-//       @return map.get($color-map, $level);
-//     }
-//     else {
-//       @warn "Invalid level: #{$level} for type: #{$type}";
-//       @return null;
-//     }
-//   }
-
-// }
-
 @function get-color($type, $level) {
   @if map.has-key($colors, $type) {
     $color-map: map.get($colors, $type);
@@ -40,22 +23,43 @@
   }
 }
 
-$colors: (
-  'brand': (
-    '400': #007bff,
-    '500': #0056b3,
-  ),
-  'warning': (
-    '400': #ffc107,
-    '600': #ff9800,
-  ),
-  'error': (
-    '500': #dc3545,
-  ),
-  'success': (
-    '700': #28a745,
-  ),
-  'gray': (
-    '600': #6c757d,
-  ),
-);
+// $colors: (
+//   'brand': (
+//     '100': #e3f2fd,
+//     '200': #bbdefb,
+//     '300': #90caf9,
+//     '400': #42a5f5,
+//   ),
+//   'warning': (
+//     '100': #fff3e0,
+//     '200': #ffe0b2,
+//     '300': #ffcc80,
+//     '400': #ffb74d,
+//     '500': #ffa726,
+//     '600': #fb8c00,
+//   ),
+//   'error': (
+//     '100': #ffebee,
+//     '200': #ffcdd2,
+//     '300': #ef9a9a,
+//     '400': #e57373,
+//     '500': #ef5350,
+//   ),
+//   'success': (
+//     '100': #e8f5e9,
+//     '200': #c8e6c9,
+//     '300': #a5d6a7,
+//     '400': #81c784,
+//     '500': #66bb6a,
+//     '600': #43a047,
+//     '700': #388e3c,
+//   ),
+//   'gray': (
+//     '100': #f5f5f5,
+//     '200': #eeeeee,
+//     '300': #e0e0e0,
+//     '400': #bdbdbd,
+//     '500': #9e9e9e,
+//     '600': #757575,
+//   ),
+// );
